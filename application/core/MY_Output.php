@@ -11,6 +11,11 @@ class MY_Output extends CI_Output {
         {
             return FALSE;
         }
+
+        if ( strpos($_SERVER['REQUEST_URI'],'image') !== false )
+        {
+            return FALSE;
+        }
         /* Simple Test for a cookie value */
         if ( (isset($_COOKIE['nocache'])) && ( $_COOKIE['nocache'] > 0 ) )
         {

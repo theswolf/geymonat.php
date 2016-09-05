@@ -1,0 +1,4 @@
+RewriteEngine on 
+RewriteCond $1 !^(index\.php|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !\.(jpg|gif|png|css|js|txt|ico|pdf|ttf|woff|eot|woff2)$ [NC]
+RewriteRule ^(.*)$ ./index.php/$1 [L]
