@@ -64,24 +64,34 @@
             $(this.refs.parallax).parallax();
         },
         getInitialState: function() {
-            return {link: './image?ver=' + this.props.time};
+            return {
+                link: './image?ver=' + this.props.time};
         },
+
         render: function(){
+
             return (
-                <div ref="parallax" className="parallax"><img src={this.state.link} alt="Unsplashed background img 1" /></div>
+                <div ref="parallax"  className="parallax"><img src={this.state.link} alt="Unsplashed background img 1" /></div>
             );
         }
     });
 
     var IndexBanner = React.createClass({
 
+        getDefaultProps: function() {
+            return {
+                height: 'auto'
+            };
+        },
+
         getTime: function() {
             return (new Date()).getTime();
         },
 
         render: function() {
+            //var divStyle = {height: this.props.height};
             return (
-                <div id="index-banner" className="parallax-container">
+                <div id="index-banner"  className="parallax-container">
                     <div className="section no-pad-bot">
                         <div className="container">
                             <br/><br/>

@@ -21,8 +21,8 @@ var Nav = component('Nav');
 var IndexBanner  = component('IndexBanner');
 ReactDOM.render(
     <div>
-    <Nav links={navlinks} />
-    <IndexBanner/>
+        <Nav links={navlinks} />
+        <IndexBanner />
     </div>,
     document.getElementById('app')
 );
