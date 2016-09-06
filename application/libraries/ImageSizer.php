@@ -55,10 +55,10 @@ class ImageSizer
         // Output the image
        //eturn imagejpeg($image_p, null, 100);
         ob_start();
-        imagejpeg($image_p);
-        $jpeg_file_contents = ob_get_contents();
+        imagepng($image_p);
+        $file_contents = ob_get_contents();
         ob_end_clean();
-        return $jpeg_file_contents;
+        return $file_contents;
 
     }
 

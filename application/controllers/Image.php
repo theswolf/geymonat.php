@@ -20,7 +20,7 @@ class Image  extends CI_Controller
         $this->output->set_header('Pragma: no-cache');
         $this->output->set_header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 
-        $this->output->set_header('Content-Type:image/jpg');
+        $this->output->set_header('Content-Type:image/png');
         $this->output->set_header('Content-Length: ' . strlen(bin2hex($file))/2);
         //$this->output->set_output(imagejpeg($file, null, 100));
 
